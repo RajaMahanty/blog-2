@@ -5,7 +5,7 @@ import { assets, blog_data, comments_data } from "../assets/assets";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loader from "../components/Loader";
-import { useAppContext } from "../context/appContext";
+import { useAppContext } from "../context/AppContext";
 import toast from "react-hot-toast";
 
 const Blog = () => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CommentTableItem from "../../components/admin/CommentTableItem";
-import { useAppContext } from "../../context/appContext";
+import { useAppContext } from "../../context/AppContext";
 import toast from "react-hot-toast";
 
 const Comments = () => {

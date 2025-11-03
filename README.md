@@ -193,7 +193,7 @@ Comment
 
 - Mongo URI: Don’t include a database name in `MONGODB_URI`; the code appends `/quickblog`.
 - Authorization header: Provide the raw JWT in `Authorization`; do not prefix with `Bearer`.
-- Case sensitivity (cross‑platform): On case‑sensitive filesystems, ensure imports’ casing matches filenames (e.g., `context/AppContext.jsx`).
+- Case sensitivity (cross‑platform): On case‑sensitive filesystems, ensure imports’ casing matches filenames (e.g., `context/AppContext
 - ImageKit: The code uploads to the folder `/blog-2/blogImages`. Ensure your account has permissions; ImageKit will create folders on-demand.
 - Security (production hardening):
   - Consider adding JWT expiry and refresh strategy.

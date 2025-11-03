@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 import { blogCategories } from "../assets/assets";
 import BlogCard from "./BlogCard";
-import { useAppContext } from "../context/appContext";
+import { useAppContext } from "../context/AppContext";
 
 const BlogList = () => {
 	const [menu, setMenu] = useState("All");

@@ -10,7 +10,7 @@ import AddBlog from "./pages/admin/AddBlog";
 import ListBlog from "./pages/admin/ListBlog";
 import Comments from "./pages/admin/Comments";
 import Login from "./components/admin/Login";
-import { useAppContext } from "./context/appContext";
+import { useAppContext } from "./context/AppContext";
 
 const App = () => {
 	const { token } = useAppContext();

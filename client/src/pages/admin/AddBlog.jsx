@@ -3,7 +3,7 @@ import Quill from "quill";
 import toast from "react-hot-toast";
 import { parse } from "marked";
 import { assets, blogCategories } from "../../assets/assets";
-import { useAppContext } from "../../context/appContext";
+import { useAppContext } from "../../context/AppContext";
 
 const AddBlog = () => {
 	const { axios } = useAppContext();
