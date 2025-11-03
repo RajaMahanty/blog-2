@@ -7,7 +7,8 @@ import blogRouter from "./routes/blogRoutes.js";
 
 const app = express();
 
-await connectDB();
+// Connect to DB (will be cached in serverless)
+connectDB();
 
 // Middlewares
 app.use(cors());
@@ -18,10 +19,13 @@ app.get("/", (req, res) => res.send("API is working"));
 app.use("/api/admin", adminRouter);
 app.use("/api/blog", blogRouter);
 
-const PORT = process.env.PORT || 3000;
+// Only start server in local development
+if (process.env.NODE_ENV !== "production") {
+	const PORT = process.env.PORT || 3000;
+	app.listen(PORT, () => {
+		console.log(`Server is running on port ${PORT}`);
+	});
+}
 
-app.listen(PORT, () => {
-	console.log(`Server is running on port ${PORT}`);
-});
-
+// Export for Vercel serverless
 export default app;
