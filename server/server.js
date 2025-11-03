@@ -7,8 +7,18 @@ import blogRouter from "./routes/blogRoutes.js";
 
 const app = express();
 
-// Connect to DB (will be cached in serverless)
-connectDB();
+// Ensure DB is connected before handling any request (works with cached connection)
+app.use(async (req, res, next) => {
+	try {
+		await connectDB();
+		return next();
+	} catch (err) {
+		console.error("DB connection error (middleware):", err);
+		return res
+			.status(500)
+			.json({ success: false, message: "Database connection error" });
+	}
+});
 
 // Middlewares
 app.use(cors());
